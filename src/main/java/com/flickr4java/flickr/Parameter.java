@@ -27,7 +27,7 @@ public class Parameter {
 
     public Parameter(String name, long value) {
         this.name = name;
-        this.value = new Long.valueof(value);
+        this.value = new value;
     }
 
     public String getName() {
