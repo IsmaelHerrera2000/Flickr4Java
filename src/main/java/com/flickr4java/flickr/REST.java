@@ -250,7 +250,7 @@ public class REST extends Transport {
         f4jResponse.parse(document);
 
         // Enable this method to update the test payloads
-        // dumpResponseToFile(request, strXml);
+    
 
         return f4jResponse;
     }
@@ -346,6 +346,8 @@ public class REST extends Transport {
                 break;
             case POST:
                  flickrMethod = request.getBodyParams().getParams().stream().filter(param -> param.getKey().equals("method")).findFirst().map(Parameter::getValue);
+                break;
+            default:
                 break;
         }
         if (flickrMethod.isPresent()) {
